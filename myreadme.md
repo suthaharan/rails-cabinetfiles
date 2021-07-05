@@ -6,12 +6,17 @@ $ sudo docker exec -it d2_app_1 /bin/sh (to execute rails commands in container)
 # README
 Local URL [http://localhost:3001/]
 Install Rails guidance [http://installrails.com]
-* # pwd
+* Check the current directory 
+$ pwd
 /app
-* # ruby -v
+
+* Check the ruby version
+$ ruby -v
 ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux]
+
 * To use a specific versio of ruby
 $ rvm use ruby 2.6.7
+
 * # rails -v
 Rails 6.0.4
 * $ gem update rails --no-ri --no-doc
@@ -106,6 +111,9 @@ Depending on your application's configuration some manual setup may be required:
      * Not required *
 
 ```
+
+* Other useful commands
+```
 $ rails g devise:views
 
 $ rails g devise User
@@ -120,3 +128,4 @@ $ rails generate migration add_user_id_to_docs user_id:integer
 $ rails c (to go to the console)
 >>> @doc = Doc.first
 >>> @doc = Doc.last
+```

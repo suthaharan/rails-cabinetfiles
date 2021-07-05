@@ -1,0 +1,5 @@
+<%= simple_form_for @doc, defaults: { input_html: { class: 'default_class' } } do |f| %>
+    <%= f.input :title, input_html: { class: 'special' } %>
+    <%= f.input :content, input_html: { maxlength: 200 } %>
+    <%= f.button :submit %>
+  <% end %>

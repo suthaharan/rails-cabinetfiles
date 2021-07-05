@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App :: Yes</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <% link_to "CabinetFiles", root_path %>
+  <% if user_signed_in? %>
+    <%= link_to "Create doc", new_doc_path %>
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "CabinetFiles", new_user_session_path %>
+  <% end %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+sssss
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<div class="container">
+<% unless @docs.blank? %>
+<% @docs.each do |d| %>
+<div class="row">
+    <h1><%= link_to d.title, d %></h1>
+    <small><%= time_ago_in_words(d.created_at) %></small>
+    <p><%= truncate(d.content, length:50) %></p>
+</div>
+<% end %>
+<% end %>
+<%= link_to "New document?", new_doc_path %>
+</div>
